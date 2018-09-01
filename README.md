@@ -11,5 +11,5 @@ This project contains script for downloading a file from S3 and finding the top 
 
 ### Deliverable: 2
 1. Dockerfile - Dockerfile to package the environment and dependencies in order to run the python script.
-                Depenedencies : python-pip, boto3.
+                Dependencies : python-pip, boto3.
 
