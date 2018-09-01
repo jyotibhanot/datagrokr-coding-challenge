@@ -1,13 +1,17 @@
 # Base Ubuntu image with base packages
-FROM jyotibhanot30/ubuntu-base:latest
+FROM python:2.7-alpine
 
 # Install dependencies
-RUN apt-get update && \ 
-    apt-get install python-pip -y && \
-    pip install boto3 
+RUN apk add --update \
+    python \
+    python-dev \
+    py-pip \
+    build-base \
+  && pip install boto3 \
+  && rm -rf /var/cache/apk/*
 
-# Present working directory
-WORKDIR /opt
+# Change home directory
+WORKDIR /home
 
 # Copy aws credentials file
 COPY aws_credentials . 
