@@ -58,7 +58,8 @@ def main():
   for filename in files:
     top5 = get_top5(filename)
     for word in top5:
-      print word[0]
+      print word[0], word[1]
+
 
 if __name__ == '__main__':
   main()
